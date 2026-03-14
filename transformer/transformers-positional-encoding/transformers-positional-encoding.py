@@ -32,15 +32,3 @@ def positional_encoding(seq_length: int, d_model: int) -> np.ndarray:
     pe[:, 1::2] = np.cos(angles)
     
     return pe
-
-# --- Example Usage ---
-if __name__ == "__main__":
-    seq_length = 5
-    d_model = 4
-    
-    pe_matrix = positional_encoding(seq_length, d_model)
-    
-    print(f"Shape: {pe_matrix.shape}\n")
-    print("Positional Encoding Matrix:")
-    # Rounding to 4 decimal places for cleaner output
-    print(np.round(pe_matrix, 4))
